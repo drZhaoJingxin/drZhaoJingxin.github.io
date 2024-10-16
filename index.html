@@ -136,6 +136,18 @@
         </div>
     </section>
 
+	
+	<!--个人技能证书-->
+	<section id="demo" class="py-5 bg-light">
+	    <div class="container">
+	        <h2 class="text-center section-title">个人主要荣誉</h2>
+	        <div class="row" id="demoContainer">
+	            <!-- Blog posts will be dynamically added here -->
+	        </div>
+	    </div>
+	</section>
+	
+
     <!-- Blog Section -->
     <section id="blog" class="py-5 bg-light">
         <div class="container">
@@ -145,6 +157,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="py-5">
@@ -210,6 +223,20 @@
 			  description: '使用若依框架，uniapp,vue,spring,uview-plus等技术实现的主题为社交表白墙的通讯app，目前正准备上线，敬请期待应用市场下载', 
 			  image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80' }
         ];
+		
+		// 个人荣誉证书
+		const demoPosts = [
+		    { title: '全国计算机应用技能大赛决赛一等奖',
+			  excerpt: '在2023年12月由全球物联网大会组委会组织的全国计算机应用技能大赛中获得决赛一等奖',
+			  image: 'image/java注解.jpeg' },
+		    { title: '天津市级志愿团队-天工开物志愿者服务队队员',
+			  excerpt: '在成为天津市志愿者队员后，参加了众多志愿活动与实践活动，获得了众多优秀志愿者称号、证书、奖牌，为社会贡献了自己的一份力量', 
+			  image: 'image/springboot.jpeg' },
+		    { title: 'Linux如何快速找回root密码', 
+			  excerpt: 'Linux系统（CentOS7.6）中，如果我们忘记了root密码或者想要修改重置密码该怎么做', 
+			  image: 'image/Linux密码.jpg' },
+		];
+		
 
         // Blog posts data
         const blogPosts = [
@@ -261,6 +288,23 @@
             `;
             projectsContainer.appendChild(projectElement);
         });
+		
+		// 个人主要荣誉
+		const demoContainer = document.getElementById('demoContainer');
+		demoPosts.forEach(post => {
+		    const postElement = document.createElement('div');
+		    postElement.className = 'col-md-6 col-lg-4 mb-4';
+		    postElement.innerHTML = `
+		        <div class="card blog-card h-100">
+		            <img src="${post.image}" class="card-img-top" alt="${post.title}">
+		            <div class="card-body">
+		                <h5 class="card-title">${post.title}</h5>
+		                <p class="card-text">${post.excerpt}</p>
+		            </div>
+		        </div>
+		    `;
+		    demoContainer.appendChild(postElement);
+		});
 
         // Populate blog posts
         const blogContainer = document.getElementById('blogContainer');
