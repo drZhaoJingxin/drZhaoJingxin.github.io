@@ -99,7 +99,7 @@
             <h2 class="text-center section-title">关于我</h2>
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="https://ibb.co/pPRxpyb" alt="John Doe" class="img-fluid rounded-circle floating">
+                    <img src="image/个人图片2.jpg" alt="Jingxin Zhao" class="img-fluid rounded-circle floating">
                 </div>
                 <div class="col-md-6">
                     <p class="lead">Hello! I'm Jingxin Zhao, a passionate full Java Full Stack Engineer with 5 years of experience in creating web applications. I specialize in JavaScript, React, Node.js, and Python.</p>
@@ -126,7 +126,7 @@
     <!-- Projects Section -->
     <section id="projects" class="py-5">
         <div class="container">
-            <h2 class="text-center section-title">My Projects</h2>
+            <h2 class="text-center section-title">我的 项目</h2>
             <div class="row" id="projectsContainer">
                 <!-- Projects will be dynamically added here -->
             </div>
@@ -136,7 +136,7 @@
     <!-- Blog Section -->
     <section id="blog" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center section-title">Latest Blog Posts</h2>
+            <h2 class="text-center section-title">最新博客文章</h2>
             <div class="row" id="blogContainer">
                 <!-- Blog posts will be dynamically added here -->
             </div>
@@ -197,16 +197,28 @@
 
         // Projects data
         const projects = [
-            { name: 'E-commerce Platform', description: 'A full-stack e-commerce solution built with React and Node.js.', image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80' },
-            { name: 'Task Management App', description: 'A responsive web app for managing tasks and projects.', image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80' },
-            { name: 'Weather Forecast App', description: 'A weather app that provides real-time forecasts using a third-party API.', image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' }
+            { name: '苍穹外卖项目', 
+			  description: '苍穹外卖是一款专门为餐饮企业定制的软件产品，包括系统管理后台和移动端应用两部分。核心技术：java + java Web + MySQL + Spring MVC + Spring Boot + Maven + Redis + JDBC... ',  
+			  image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80' },
+            { name: '仿写网易云音乐项目', 
+			  description: 'A responsive web app for managing tasks and projects.', 
+			  image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80' },
+            { name: '社交应用软件开发项目', 
+			  description: 'A weather app that provides real-time forecasts using a third-party API.', 
+			  image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' }
         ];
 
         // Blog posts data
         const blogPosts = [
-            { title: 'Getting Started with React Hooks', excerpt: 'Learn how to use React Hooks to write more concise and reusable code.', image: 'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' },
-            { title: 'Building RESTful APIs with Node.js', excerpt: 'A comprehensive guide to creating robust RESTful APIs using Node.js and Express.', image: 'https://images.unsplash.com/photo-1654277041028-ffa014fb301e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' },
-            { title: 'Mastering CSS Grid Layout', excerpt: 'Dive deep into CSS Grid and learn how to create complex layouts with ease.', image: 'https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' }
+            { title: 'java后端常用注解类总结',
+			  excerpt: '创建对象的注解：@Controller:放在类的上面，创建控制器对象，注入到容器中',
+			  image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80' },
+            { title: '# 入门SpringBoot基础笔记',
+			  excerpt: 'SpringBoot是Spring中的一个成员， 可以简化Spring，SpringMVC的使用。 他的核心还是IOC容器。', 
+			  image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80' },
+            { title: 'Linux如何快速找回root密码', 
+			  excerpt: 'Linux系统（CentOS7.6）中，如果我们忘记了root密码或者想要修改重置密码该怎么做', 
+			  image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80' },
         ];
 
         // Populate skills
@@ -260,12 +272,19 @@
                         <p class="card-text">${post.excerpt}</p>
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="btn btn-outline-primary">Read More</a>
+                        <a href="https://blog.csdn.net/qq_66848092?type=blog" class="btn btn-outline-primary">Read More</a>
                     </div>
                 </div>
             `;
             blogContainer.appendChild(postElement);
         });
+
+
+
+
+
+
+
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
