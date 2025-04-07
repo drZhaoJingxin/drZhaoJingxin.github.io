@@ -6,7 +6,7 @@
     <title>Zhao Jingxin の website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
- </head>
+</head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -33,8 +33,7 @@
         <div class="container text-center">
             <h1 class="display-1 mb-4">Jingxin Zhao</h1>
             <h2 class="display-4 mb-4">Java Full Stack Engineer</h2>
-             <!-- <a href="#projects" class="btn btn-primary btn-lg">View My Work</a> -->
-	    <a href="./home.html" class="btn btn-primary btn-lg">View My Work</a>
+            <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
         </div>
     </header>
 
@@ -49,9 +48,9 @@
                 <div class="col-md-6">
                     <p class="lead">欢迎光临我的网站，我是赵晶鑫，我的职业方向是Java全栈工程师，我擅长，java、spring架构、Vue、前端三件套、MySQL、RuoYi、视频剪辑等技术，目前居住在天津，爱好读书、音乐、编程等</p>
                     <p>邮箱：lisiwei0114@qq.com</p>
-					<p>电话：18804797036</p>
-					<p>微信：lisiweiisastar040114</p>
-					<p>QQ：3373314318</p>
+                    <p>电话：18804797036</p>
+                    <p>微信：lisiweiisastar040114</p>
+                    <p>QQ：3373314318</p>
                     <div class="mt-4">
                         <a href="https://github.com/" class="btn btn-outline-primary me-2"><i class="fab fa-github"></i> GitHub</a>
                         <a href="https://blog.csdn.net/" class="btn btn-outline-info"><i class="fab fa-linkedin"></i> CSDN</a>
@@ -81,17 +80,15 @@
         </div>
     </section>
 
-	
-	<!--个人技能证书-->
-	<section id="demo" class="py-5 bg-light">
-	    <div class="container">
-	        <h2 class="text-center section-title">个人主要荣誉</h2>
-	        <div class="row" id="demoContainer">
-	            <!-- Blog posts will be dynamically added here -->
-	        </div>
-	    </div>
-	</section>
-	
+    <!-- Personal Honors Section -->
+    <section id="demo" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">个人主要荣誉</h2>
+            <div class="row" id="demoContainer">
+                <!-- Honors will be dynamically added here -->
+            </div>
+        </div>
+    </section>
 
     <!-- Blog Section -->
     <section id="blog" class="py-5 bg-light">
@@ -102,7 +99,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Contact Section -->
     <section id="contact" class="py-5">
@@ -133,7 +129,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>&copy; 2024 John Doe. All rights reserved.</p>
+            <p>&copy; 2024 Jingxin Zhao. All rights reserved.</p>
             <div class="mt-3">
                 <a href="#" class="text-white me-3"><i class="fab fa-github"></i></a>
                 <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
@@ -158,42 +154,59 @@
 
         // Projects data
         const projects = [
-            { name: '苍穹外卖项目', 
-			  description: '苍穹外卖是一款专门为餐饮企业定制的软件产品，包括系统管理后台和移动端应用两部分。核心技术：java + java Web + MySQL + Spring MVC + Spring Boot + Maven + Redis + JDBC... ',  
-			  image: 'https://i.postimg.cc/d10nsqZP/20241022142954.jpg' },
-            { name: '仿写网易云音乐项目', 
-			  description: '此项目主要内容是使用Vue2对网易云音乐官网其中一些主要页面进行了仿写实现，实现了获取音乐，页面跳转，监听判断等功能', 
-			  image: 'https://i.postimg.cc/0Q5XzY34/20241022141716.jpg' },
-            { name: '社交应用软件开发项目', 
-			  description: '使用若依框架，uniapp,vue,spring,uview-plus等技术实现的主题为社交表白墙的通讯app，目前正准备上线，敬请期待应用市场下载', 
-			  image: 'https://i.postimg.cc/Qx28XbHH/20241007134558.png' }
+            { 
+                name: '苍穹外卖项目', 
+                description: '苍穹外卖是一款专门为餐饮企业定制的软件产品，包括系统管理后台和移动端应用两部分。核心技术：java + java Web + MySQL + Spring MVC + Spring Boot + Maven + Redis + JDBC...',  
+                image: 'https://i.postimg.cc/d10nsqZP/20241022142954.jpg'
+            },
+            { 
+                name: '仿写网易云音乐项目', 
+                description: '此项目主要内容是使用Vue2对网易云音乐官网其中一些主要页面进行了仿写实现，实现了获取音乐，页面跳转，监听判断等功能', 
+                image: 'https://i.postimg.cc/0Q5XzY34/20241022141716.jpg'
+            },
+            { 
+                name: '社交应用软件开发项目', 
+                description: '使用若依框架，uniapp,vue,spring,uview-plus等技术实现的主题为社交表白墙的通讯app，目前正准备上线，敬请期待应用市场下载', 
+                image: 'https://i.postimg.cc/Qx28XbHH/20241007134558.png'
+            }
         ];
-		
-		// 个人荣誉证书
-		const demoPosts = [
-		    { title: '全国计算机应用技能大赛决赛一等奖',
-			  excerpt: '在2023年12月由全球物联网大会组委会组织的全国计算机应用技能大赛中获得决赛一等奖',
-			  image: 'https://i.postimg.cc/5yZqjLMf/image.jpg' },
-		    { title: '天津市级志愿队-天工开物志愿者服务队队员',
-			  excerpt: '在成为天津市志愿者队员后，参加了众多志愿活动与实践活动，获得了众多优秀志愿者称号、证书、奖牌，为社会贡献了自己的一份力量', 
-			  image: 'https://i.postimg.cc/xj7PsDNB/image.jpg' },
-		    { title: '大学生网络与信息安全竞赛一等奖', 
-			  excerpt: '在2024年8月参加第四届大学生网络与信息安全竞赛中获得一等奖', 
-			  image: 'https://i.postimg.cc/KvMDwqnj/image.jpg' },
-		];
-		
+
+        // Personal Honors data
+        const demoPosts = [
+            { 
+                title: '全国计算机应用技能大赛决赛一等奖',
+                excerpt: '在2023年12月由全球物联网大会组委会组织的全国计算机应用技能大赛中获得决赛一等奖',
+                image: 'https://i.postimg.cc/5yZqjLMf/image.jpg'
+            },
+            { 
+                title: '天津市级志愿队-天工开物志愿者服务队队员',
+                excerpt: '在成为天津市志愿者队员后，参加了众多志愿活动与实践活动，获得了众多优秀志愿者称号、证书、奖牌，为社会贡献了自己的一份力量', 
+                image: 'https://i.postimg.cc/xj7PsDNB/image.jpg'
+            },
+            { 
+                title: '大学生网络与信息安全竞赛一等奖', 
+                excerpt: '在2024年8月参加第四届大学生网络与信息安全竞赛中获得一等奖', 
+                image: 'https://i.postimg.cc/KvMDwqnj/image.jpg'
+            }
+        ];
 
         // Blog posts data
         const blogPosts = [
-            { title: 'java后端常用注解类总结',
-			  excerpt: '创建对象的注解：@Controller:放在类的上面，创建控制器对象，注入到容器中',
-			  image: 'https://i.postimg.cc/BnXLMjv0/20241022141708.jpg' },
-            { title: '# 入门SpringBoot基础笔记',
-			  excerpt: 'SpringBoot是Spring中的一个成员， 可以简化Spring，SpringMVC的使用。 他的核心还是IOC容器。', 
-			  image: 'https://i.postimg.cc/8z9F3TFr/202410221417082.jpg' },
-            { title: 'Linux如何快速找回root密码', 
-			  excerpt: 'Linux系统（CentOS7.6）中，如果我们忘记了root密码或者想要修改重置密码该怎么做', 
-			  image: 'https://i.postimg.cc/rp4d27WZ/202410221417081.jpg' },
+            { 
+                title: 'java后端常用注解类总结',
+                excerpt: '创建对象的注解：@Controller:放在类的上面，创建控制器对象，注入到容器中',
+                image: 'https://i.postimg.cc/BnXLMjv0/20241022141708.jpg'
+            },
+            { 
+                title: '# 入门SpringBoot基础笔记',
+                excerpt: 'SpringBoot是Spring中的一个成员， 可以简化Spring，SpringMVC的使用。 他的核心还是IOC容器。', 
+                image: 'https://i.postimg.cc/8z9F3TFr/202410221417082.jpg'
+            },
+            { 
+                title: 'Linux如何快速找回root密码', 
+                excerpt: 'Linux系统（CentOS7.6）中，如果我们忘记了root密码或者想要修改重置密码该怎么做', 
+                image: 'https://i.postimg.cc/rp4d27WZ/202410221417081.jpg'
+            }
         ];
 
         // Populate skills
@@ -221,7 +234,7 @@
             projectElement.className = 'col-md-6 col-lg-4 mb-4';
             projectElement.innerHTML = `
                 <div class="card project-card h-100">
-                    <img src="${project.image}" class="card-img-top"   alt="${project.name}">
+                    <img src="${project.image}" class="card-img-top" alt="${project.name}">
                     <div class="card-body">
                         <h5 class="card-title">${project.name}</h5>
                         <p class="card-text">${project.description}</p>
@@ -233,23 +246,23 @@
             `;
             projectsContainer.appendChild(projectElement);
         });
-		
-		// 个人主要荣誉
-		const demoContainer = document.getElementById('demoContainer');
-		demoPosts.forEach(demo => {
-		    const demoElement = document.createElement('div');
-		    demoElement.className = 'col-md-6 col-lg-4 mb-4';
-		    demoElement.innerHTML = `
-		        <div class="card blog-card h-100">
-		            <img src="${demo.image}" class="card-img-top" alt="${demo.title}">
-		            <div class="card-body">
-		                <h5 class="card-title">${demo.title}</h5>
-		                <p class="card-text">${demo.excerpt}</p>
-		            </div>
-		        </div>
-		    `;
-		    demoContainer.appendChild(demoElement);
-		});
+
+        // Populate personal honors
+        const demoContainer = document.getElementById('demoContainer');
+        demoPosts.forEach(demo => {
+            const demoElement = document.createElement('div');
+            demoElement.className = 'col-md-6 col-lg-4 mb-4';
+            demoElement.innerHTML = `
+                <div class="card blog-card h-100">
+                    <img src="${demo.image}" class="card-img-top" alt="${demo.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${demo.title}</h5>
+                        <p class="card-text">${demo.excerpt}</p>
+                    </div>
+                </div>
+            `;
+            demoContainer.appendChild(demoElement);
+        });
 
         // Populate blog posts
         const blogContainer = document.getElementById('blogContainer');
@@ -271,7 +284,6 @@
             blogContainer.appendChild(postElement);
         });
 
-
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -282,7 +294,7 @@
             });
         });
 
-        // GSAP animations
+        // Initialize GSAP
         gsap.registerPlugin(ScrollTrigger);
 
         // Animate skill progress bars
@@ -293,7 +305,7 @@
                 ease: 'power2.out',
                 scrollTrigger: {
                     trigger: bar,
-                    start: 'top 80%',
+                    start: 'top 80%'
                 }
             });
         });
@@ -306,7 +318,7 @@
                 duration: 1,
                 scrollTrigger: {
                     trigger: section,
-                    start: 'top 80%',
+                    start: 'top 80%'
                 }
             });
         });
@@ -318,64 +330,60 @@
             this.reset();
         });
     </script>
-	
-	
-	<style>
-	        /* Custom CSS */
-	        body {
-	            font-family: 'Roboto', sans-serif;
-	        }
-	        .hero {
-	            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
-	            background-size: cover;
-	            height: 100vh;
-	            color: white;
-	        }
-	        .section-title {
-	            position: relative;
-	            display: inline-block;
-	            padding-bottom: 10px;
-	            margin-bottom: 30px;
-	        }
-	        .section-title::after {
-	            content: '';
-	            position: absolute;
-	            display: block;
-	            width: 50px;
-	            height: 3px;
-	            background-color: #007bff;
-	            bottom: 0;
-	            left: 50%;
-	            transform: translateX(-50%);
-	        }
-	        .skill-item {
-	            transition: transform 0.3s ease-in-out;
-	        }
-	        .skill-item:hover {
-	            transform: translateY(-5px);
-	        }
-	        .project-card {
-	            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-	        }
-	        .project-card:hover {
-	            transform: translateY(-10px);
-	            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-	        }
-	        .blog-card {
-	            transition: transform 0.3s ease-in-out;
-	        }
-	        .blog-card:hover {
-	            transform: translateY(-5px);
-	        }
-	        .floating {
-	            animation: floating 3s ease-in-out infinite;
-	        }
-	        @keyframes floating {
-	            0% { transform: translate(0,  0px); }
-	            50%  { transform: translate(0, 15px); }
-	            100%   { transform: translate(0, -0px); }   
-	        }
-	    </style>
-	
 </body>
+	<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            color: white;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #007bff;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .skill-item {
+            transition: transform 0.3s ease-in-out;
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+        .project-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .blog-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+    </style>
 </html>
