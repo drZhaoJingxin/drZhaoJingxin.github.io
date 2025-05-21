@@ -127,8 +127,21 @@
             <!-- 右侧内容 -->
             <div class="content">
                 <ul class="article-list">
-                    <li class="article-item">
-                        <a href="wenzhang.html" style="display: flex; width: 100%; height: 100%;">
+					<li class="article-item" @click="">
+					        <div class="article-image">
+					            <img src="./image/百度录取.jpg" alt="文章图片">
+					        </div>
+					        <div class="article-content">
+					            <div class="meta-tag">联合开发</div>
+					            <h3 class="article-title">脊柱康复小程序后端和管理平台开发</h3>
+					            <p class="article-excerpt">深入业务场景的企业级实战项目，AI 快速制作并发布多种类型的答题应用平台。 用户可以基于 AI 快速制作并发布多种答题应用，支持检索和分享应用、提供了流畅的在线答题功能，并基于评分算法或 AI 得到回答总结；为管理员提供了全面的内容管理与数据分析工具。可以严格审核应用，确保平台内容的质量与合规性，同时集中管理整站内容，实现对平台资源的精细化管控。</p>
+					            <div class="article-meta">
+					                <div class="meta-item">完成时间 2025.05.30 · 1213 阅读 · 31 点赞 · 0 评论 · 20 收藏</div>
+					            </div>
+					        </div>
+					</li>
+					
+                    <li class="article-item" @click="">
                             <div class="article-image">
                                 <img src="./image/百度录取.jpg" alt="文章图片">
                             </div>
@@ -140,7 +153,6 @@
                                     <div class="meta-item">完成时间 2025.05.30 · 1213 阅读 · 31 点赞 · 0 评论 · 20 收藏</div>
                                 </div>
                             </div>
-                        </a>
                     </li>
 
                     <li class="article-item">
@@ -157,7 +169,7 @@
                         </div>
                     </li>
 
-                    <li class="article-item">
+                    <li class="article-item" @click="">
                         <div class="article-image">
                             <img src="./image/百度录取.jpg" alt="文章图片">
                         </div>
@@ -404,6 +416,18 @@
         
         window.addEventListener('scroll', checkVisibility);
         window.addEventListener('load', checkVisibility);
+		
+		
+		//切换页面
+		document.addEventListener('DOMContentLoaded',function(){
+			const articleItems = document.querySelectorAll('.article-item');
+			articleItems.forEach(item => {
+				item.addEventListener('click',function(){
+					window.location.href = './pages/wenzhang.html';
+				})
+			})
+		})
+		
     </script>
 </body>
 
