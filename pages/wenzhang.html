@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TortoiseGit「git did not exit cleanly (exit code 128)」が発生した時の対処</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-text">Zenn</div>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="検索">
+        </div>
+        <button class="login-btn">Log in</button>
+    </header>
+
+    <div class="container">
+
+        <div class="main-content">
+            <h1 class="article-title">TortoiseGit「git did not exit cleanly (exit code 128)」が発生した</h1>
+            <h2 class="article-subtitle">時の対処</h2>
+            
+            <div class="article-meta">
+                <span>2021/05/10に公開</span>
+                <div class="user-icon"></div>
+                <span>1人</span>
+            </div>
+
+            <div class="tags">
+                <div class="tag">Git</div>
+                <div class="tag">GitHub</div>
+                <div class="tag">Windows 10</div>
+                <div class="tag">TortoiseGit</div>
+                <div class="tag">エラーメッセージ</div>
+                <div class="tag">Tech</div>
+            </div>
+
+            <section>
+                <h2>概要</h2>
+                <p>Windows10+github + TortoiseGit の組み合わせで使っていたところ先に「git did not exit cleanly (exit code 128)」というエラーが発生してCommitに失敗して、Fetchも出来ない状態となってしまいました。</p>
+            </section>
+
+            <section>
+                <h2>状況</h2>
+                <ul>
+                    <li>前日にはGithubへのCommitを行っているが普通に使っている状況であった</li>
+                    <li>ユーザー名・パスワード等は変更していない</li>
+                    <li>Windows10のバージョンや强制チャットダウンも発生していない</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>エラーメッセージをGoogleで翻訳してみる</h2>
+                <div class="error-message">git did not exit cleanly (exit code 128)</div>
+                <div class="code-block">gitが正常に終了しませんでした（終了コード128）</div>
+                <p>gitが正常に終了していないと発生するのかな？</p>
+                <p>しかし、Windows10を再起動しても変わらず。</p>
+            </section>
+
+            <section>
+                <h2>Google検索</h2>
+                <p>Googleでエラーメッセージを検索すると</p>
+                <ul>
+                    <li>TortoiseGitのターミナルや証明書にエラーがある時に発生する</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="sidebar-right">
+            <div class="user-card">
+                <div class="user-avatar"></div>
+                <div class="user-info">
+                    <h4>おつじ</h4>
+                    <p>フォロー</p>
+                </div>
+            </div>
+            <button class="follow-btn">バッジを贈る</button>
+            
+            <div class="toc">
+                <h3>目次</h3>
+                <ul class="toc-list">
+                    <li><a href="#概要">概要</a></li>
+                    <li><a href="#状況">状況</a></li>
+                    <li><a href="#エラーメッセージをGoogleで翻訳してみる">エラーメッセージをGoogleで翻訳してみる</a></li>
+                    <li><a href="#Google検索">Google検索</a></li>
+                </ul>
+            </div>
+            
+            <div class="toc">
+                <h3>Zennからののお知らせ</h3>
+                <ul class="toc-list">
+                    <li><a href="#">第2回 AI Agent Hackathon with Google Cloud AI 参加者募集中！</a></li>
+                    <li><a href="#">記事投稿イベント：「TypeScript」でやってみた技術 / チーム / 公開 airlift、9/22まで</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.social-icon:first-child').addEventListener('click', function() {
+                this.classList.toggle('liked');
+                this.style.color = this.classList.contains('liked') ? '#EF4444' : '#718096';
+            });
+
+            document.querySelectorAll('.social-icon')[1].addEventListener('click', function() {
+                this.classList.toggle('bookmarked');
+                this.style.color = this.classList.contains('bookmarked') ? '#F59E0B' : '#718096';
+            });
+        });
+    </script>
+	
+	<style>
+	    * {
+	        margin: 0;
+	        padding: 0;
+	        box-sizing: border-box;
+	        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	    }
+	
+	    body {
+	        background-color: #f5f7fa;
+	        color: #333;
+	        line-height: 1.6;
+	    }
+	
+	    header {
+	        background-color: white;
+	        padding: 12px 20px;
+	        display: flex;
+	        justify-content: space-between;
+	        align-items: center;
+	        border-bottom: 1px solid #e1e5eb;
+	    }
+	
+	    .logo {
+	        display: flex;
+	        align-items: center;
+	    }
+	
+	    .logo-text {
+	        font-weight: bold;
+	        font-size: 18px;
+	        color: #6B46C1;
+	    }
+	
+	    .search-box {
+	        position: relative;
+	        margin: 0 20px;
+	    }
+	
+	    .search-box input {
+	        padding: 8px 15px;
+	        border-radius: 20px;
+	        border: 1px solid #e1e5eb;
+	        width: 200px;
+	        font-size: 14px;
+	    }
+	
+	    .login-btn {
+	        background-color: #2563eb;
+	        color: white;
+	        border: none;
+	        padding: 8px 16px;
+	        border-radius: 20px;
+	        font-size: 14px;
+	        cursor: pointer;
+	    }
+	
+	    .container {
+	        display: flex;
+	        max-width: 1200px;
+	        margin: 0 auto;
+	        padding: 20px;
+	        flex-wrap: wrap;
+	    }
+	
+	    .sidebar-left {
+	        width: 80px;
+	        padding: 20px 0;
+	        display: flex;
+	        flex-direction: column;
+	        align-items: center;
+	    }
+	
+	    .social-icon {
+	        width: 36px;
+	        height: 36px;
+	        border-radius: 50%;
+	        display: flex;
+	        justify-content: center;
+	        align-items: center;
+	        margin-bottom: 15px;
+	        cursor: pointer;
+	        color: #718096;
+	        font-size: 18px;
+	    }
+	
+	    .social-icon:hover {
+	        color: #2563eb;
+	    }
+	
+	    .main-content {
+	        flex: 1;
+	        padding: 20px;
+	        background-color: white;
+	        border-radius: 8px;
+	        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	        margin-right: 20px;
+	    }
+	
+	    .article-title {
+	        font-size: 22px;
+	        margin-bottom: 10px;
+	        color: #1f2937;
+	    }
+	
+	    .article-subtitle {
+	        font-size: 18px;
+	        margin-bottom: 20px;
+	        color: #4b5563;
+	    }
+	
+	    .article-meta {
+	        display: flex;
+	        align-items: center;
+	        margin-bottom: 20px;
+	        color: #6b7280;
+	        font-size: 14px;
+	    }
+	
+	    .user-icon {
+	        width: 20px;
+	        height: 20px;
+	        border-radius: 50%;
+	        background-color: #e1e5eb;
+	        margin-right: 5px;
+	        display: inline-block;
+	    }
+	
+	    .tags {
+	        display: flex;
+	        flex-wrap: wrap;
+	        margin-bottom: 20px;
+	    }
+	
+	    .tag {
+	        display: flex;
+	        align-items: center;
+	        padding: 4px 10px;
+	        background-color: #f3f4f6;
+	        border-radius: 20px;
+	        font-size: 12px;
+	        margin-right: 8px;
+	        margin-bottom: 8px;
+	    }
+	
+	    h2 {
+	        font-size: 18px;
+	        margin: 20px 0 10px;
+	        color: #1f2937;
+	    }
+	
+	    p {
+	        margin-bottom: 15px;
+	        font-size: 15px;
+	        color: #374151;
+	    }
+	
+	    ul {
+	        margin-left: 20px;
+	        margin-bottom: 15px;
+	    }
+	
+	    li {
+	        margin-bottom: 8px;
+	        font-size: 15px;
+	        color: #374151;
+	    }
+	
+	    .error-message {
+	        background-color: #fef2f2;
+	        border-left: 3px solid #ef4444;
+	        padding: 10px 15px;
+	        margin: 15px 0;
+	        font-size: 14px;
+	    }
+	
+	    .code-block {
+	        background-color: #f9fafb;
+	        padding: 10px;
+	        border-radius: 4px;
+	        font-family: monospace;
+	        font-size: 14px;
+	        margin: 15px 0;
+	    }
+	
+	    .sidebar-right {
+	        width: 280px;
+	        padding: 20px;
+	        background-color: white;
+	        border-radius: 8px;
+	        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	        margin-left: 20px;
+	    }
+	
+	    .user-card {
+	        display: flex;
+	        align-items: center;
+	        padding: 10px 0;
+	        border-bottom: 1px solid #e5e7eb;
+	    }
+	
+	    .user-avatar {
+	        width: 40px;
+	        height: 40px;
+	        border-radius: 50%;
+	        background-color: #e1e5eb;
+	        margin-right: 10px;
+	    }
+	
+	    .user-info h4 {
+	        font-size: 14px;
+	        margin-bottom: 2px;
+	    }
+	
+	    .user-info p {
+	        font-size: 12px;
+	        color: #6b7280;
+	    }
+	
+	    .follow-btn {
+	        background-color: #2563eb;
+	        color: white;
+	        border: none;
+	        padding: 8px 16px;
+	        border-radius: 20px;
+	        font-size: 14px;
+	        cursor: pointer;
+	        margin-bottom: 15px;
+	        width: 100%;
+	    }
+	
+	    .toc h3 {
+	        font-size: 16px;
+	        margin-bottom: 10px;
+	    }
+	
+	    .toc-list {
+	        list-style-type: none;
+	    }
+	
+	    .toc-list li {
+	        margin-bottom: 8px;
+	        font-size: 14px;
+	        color: #4b5563;
+	    }
+	
+	    .toc-list li a {
+	        text-decoration: none;
+	        color: inherit;
+	    }
+	
+	    .toc-list li a:hover {
+	        color: #2563eb;
+	    }
+	
+	    /* 响应式设计 */
+	    @media (max-width: 768px) {
+	        .container {
+	            flex-direction: column;
+	        }
+	
+	        .sidebar-left, .sidebar-right {
+	            margin-bottom: 20px;
+	        }
+	
+	        .main-content {
+	            margin-right: 0;
+	        }
+	
+	        .sidebar-right {
+	            width: 100%;
+	        }
+	    }
+	</style>
+</body>
+</html>
