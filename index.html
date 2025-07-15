@@ -46,8 +46,12 @@
             <div class="card">
                 <div class="card-title">个人成就</div>
                 <ul>
-                    <li>⭐ 累计收获 1500+ 粉丝</li>
-                    <li>💬 累计发表 35 篇原创博客</li>
+                    <li>⭐ 累计收获 1900+ 粉丝</li>
+                    <!-- <li> 累计发表 35 篇原创博客</li> -->
+					<!-- <li>💬点击查看我的博客</li> -->
+					<li>
+					  <a href="https://blog.csdn.net/qq_66848092?spm=1000.2115.3001.5343" target="_blank">💬 <strong>点击查看我的博客</strong></a>
+					</li>
                     <li>❤️ 力扣刷题 630+ 道</li>
                     <li>🔄 代码片被分享 138 次</li>
                 </ul>
@@ -119,7 +123,7 @@ const allArticles = [
             <p>经过现场的激烈角逐，团队凭借扎实的专业功底、出色的现场发挥，荣获 <strong>天津市一等奖</strong>，顺利晋级全国赛争夺赛阶段。</p>
             <p>本次比赛不仅锻炼了实战能力，也让我更加坚定了深耕技术的信心。</p>
         `,
-        meta:'2025.07.14 · 1213 阅读 · 31 点赞 · 20 收藏',
+        meta:'2025.07.14 ',
     },
     {
         img:'./image/脊柱admin.png',
@@ -135,26 +139,29 @@ const allArticles = [
             </ul>
             <p>核心难点：高并发挂号、支付分账、敏感数据加密、亲属关系链设计。</p>
         `,
-        meta:'2025.05.30 · 1213 阅读 · 31 点赞 · 20 收藏',
+        meta:'2025.05.30 ',
     },
     {
-        img:'https://picsum.photos/seed/3/600/400',
+        img:'./image/人才筛选.jpg',
         tag:'独立开发',
-        title:'AI 智能答题平台项目（前后端分离 Spring Boot 项目）',
-        excerpt:'集成 NLP 题库生成、实时评分、个性化推荐、多端适配、Redis 缓存、MySQL 分库分表……',
+        title:'三算法合一实现企业筛选人才项目模块（前后端分离 Spring Boot 项目）',
+        excerpt:'聚类算法使用的是多聚点等距离计算的筛选方法，这种方法可以更好的将学历不是很高但能力或项目经验突出的学生筛选出来被企业看到。这样才能更好的消除学历歧视，让更多社会中的人才被发现！',
         content:`
             <p>项目亮点：</p>
             <ul>
-                <li>NLP 自动生成题库：基于 HanLP / Jieba 实现关键词提取与相似度计算；</li>
-                <li>实时评分：WebSocket + Redis Pub/Sub；</li>
-                <li>个性化推荐：协同过滤 + 内容推荐混合算法；</li>
-                <li>分库分表：ShardingSphere 5.x，支持 1000w+ 题库。</li>
+			    <li>k-means聚类算法：实现计算欧式距离并筛选人才的功能</li>
+			    <li>协同过滤算法：实现通过用户活跃度过滤掉活跃度低的用户的功能</li>
+			    <li>动态规划算法：为企业计算每个人才的匹配值以及推荐理由功能。</li>
+				<li><strong>功能介绍：</strong></li>
+                <li>将企业选择的选项作为第一个聚点传到算法逻辑中，再将人才池中所有经过协同过滤算法的学生的数据平均值作为第二个聚点，将大数据记录统计已入职学生的数据作为第三个聚点，根据人才池中所有学生在应用中的活跃度进行筛选，综合值太低的过滤出去，前十名的平均数据作为第四个聚点。</li>
+                <li>对这四个聚点使用两轮k-means++算法进行人才筛选为企业推荐最优秀的十名学生，在使用协同过滤+动态规划算法为人才生成推荐理由和排名列表供企业选择。</li>
+                <li></li>
             </ul>
         `,
-        meta:'2025.05.30 · 1213 阅读 · 31 点赞 · 20 收藏',
+        meta:'2025.05.30 ',
     },
     {
-        img:'https://picsum.photos/seed/4/600/400',
+        img:'./image/外卖商家端.png',
         tag:'联合企业-独立开发',
         title:'企业级项目-“大学牲”二期商家骑手 App 独立开发',
         excerpt:'本人独立完成从需求开发→设计→代码编写→测试的项目开发全部流程，项目难点包括独立设计了一套高效的身份认证与切换机制、成功集成支付功能，通过加密技术保护用户隐私数据等。',
@@ -163,67 +170,106 @@ const allArticles = [
             <p>技术栈：Spring Boot + UniApp + MySQL + Redis + 微信支付 + 阿里云 OSS。</p>
             <p>独立完成功能：</p>
             <ul>
-                <li>商家入驻 / 商品管理 / 订单语音播报</li>
-                <li>骑手接单 / 路径规划 / 收益提现</li>
-                <li>双向评价 & 风控拦截</li>
+                <li>本技术方案旨在使用uniapp以及springboot为骑手与商家设计一个集成化的移动应用平台，以提升外卖配送效率、优化商家管理体验、增强用户满意度。该平台将实现订单管理、骑手调度、商家运营、数据分析等功能，确保信息实时同步，操作便捷高效。</li>
+                <li>难点：用户角色和权限的校验，订单的获取与传递，工作流的设定与执行、支付提款功能的实现</li>
+                <li>目前本项目软件已交付甲方批量投入使用。</li>
             </ul>
         `,
-        meta:'2025.05.02 · 727 阅读 · 15 点赞 · 17 收藏',
+        meta:'2025.05.02 ',
     },
     {
-        img:'https://picsum.photos/seed/5/600/400',
+        img:'./image/输入法.jpg',
         tag:'联合企业独立开发',
         title:'搜狗输入法皮肤开发（HTML+JavaScript）',
-        excerpt:'采用 js+html 进行搜狗输入法皮肤开发……',
+        excerpt:'搜狗输入法皮肤开发在极限空间与性能约束下，用网页技术打造安全、轻量、可运营的桌面微界面；它不仅为亿级用户提供个性体验，也为行业验证了“浏览器内核+极端裁剪”在桌面小窗场景的落地范式。',
         content:`
-            <p>纯前端实现搜狗输入法皮肤，核心：</p>
+            <p></p>
             <ul>
-                <li>Canvas 绘制动态背景</li>
-                <li>JavaScript 控制候选词动画</li>
-                <li>JSON 配置化主题切换</li>
-            </ul>
+                <li><strong>设计原则</strong>：极致轻量——桌面空间有限，皮肤必须在
+				<strong>“小巧”与“美观”</strong>
+				之间极限平衡；安全红线——
+				<strong>禁止可执行文件、弹窗、死循环</strong>，
+				违规即永久封禁作者；性能红线——<strong>Chromium 80 内核 + 45 fps 上限</strong>，
+				动画需精细优化。</li>
+				<li><strong>技术架构</strong>：双渲染区域——<strong>状态栏固定尺寸、打字窗口随字体动态缩放</strong>；虚拟域名 <code>https://page.ssr/</code> 多目录隔离，页面<strong>禁用 localStorage</strong>，数据经输入法加密通道；多页面层级 <strong>序号越小越在上层</strong>，点击穿透顺序固定。</li>
+				
+				<li><strong>开发流程</strong>：五步定位法——<strong>静态占位图 → zip 解压 → skin.ini 参数替换 → 预览图生成 → 重打包签名</strong>；调试体系——注册表开启开发模式、<strong>CTRL+ALT+左键</strong>唤起 DevTools，发布与调试仅一标志位之差。</li>
+				
+				<li><strong>交互限制</strong>：事件阉割——仅监听<strong>左键点击、键盘按键</strong>，无法输入文字、无右键；拖动需 <code>skin.ini</code> 显式声明；打字窗口宽高<strong>随用户字体实时变化</strong>，HTML 需内置自适应逻辑。</li>
+				
+				<li><strong>开放能力</strong>：JS-SDK <strong>15 个核心接口</strong>——状态监听、统计、文件、配置、跨页面通信；数据存储——<strong>配置 AES 加密</strong>、文件明文隔离；可获取<strong>用户昵称、机器码、渠道版本</strong>，支持精细化运营。</li>
+				
+				<li><strong>项目难度</strong>：极致约束下的工程深度——<strong>45 fps、无 localStorage、阉割事件模型</strong>，需嵌入式思维写 Web；安全与体验零和博弈——<strong>白名单权限 + 黑名单惩罚</strong>并举；动态适配复杂度——<strong>两套坐标系同一套前端代码</strong>。</li>
+				
+				<li><strong>项目价值</strong>：<strong>搜狗</strong>获海量皮肤生态、亿级用户换肤留存；<strong>开发者</strong>得“即点即用”微型应用平台；<strong>行业</strong>验证“浏览器内核 + 极端裁剪”在桌面小窗场景落地，为后续桌面 Widget、系统插件提供可复制方法论。</li>
+			</ul>
         `,
-        meta:'2025.02.11 · 235 阅读 · 2 点赞 · 5 收藏',
+        meta:'2025.02.11 ',
     },
     {
-        img:'https://picsum.photos/seed/6/600/400',
+        img:'./image/话题项目.png',
         tag:'联合企业团队开发',
         title:'企业级项目-“大学牲”一期话题项目联合开发',
-        excerpt:'本项目是来源于校企合作的真实大型项目……',
-        content:`<p>负责话题社区模块，技术要点：</p><ul><li>高并发帖子推送</li><li>敏感词过滤 + 图片鉴黄</li><li>ElasticSearch 搜索优化</li></ul>`,
-        meta:'2024.12.11 · 1128 阅读 · 21 点赞 · 24 收藏',
+        excerpt:'本项目是来源于校企合作的真实大型项目，前端uniapp手机用户端以及管理端，后端使用 springboot 开发，本项目的本质是论坛系统，主要功能有话题发布、好友社交等功能。',
+        content:`<p></p>
+			<ul>
+			    <li><strong>项目角色与范围</strong>：担任全栈开发工程师，端到端负责需求拆解、架构设计、上线运维，保障四端统一、高并发、安全合规。</li>
+			    <li><strong>前端技术挑战</strong>：基于 uni-app + Vue3 一套代码输出 iOS / Android / H5 / 管理端四端，兼容 20 余种异形屏并实现离线包缓存。</li>
+			    <li><strong>后端架构深度</strong>：Spring Boot + Spring Security 扩展 RBAC 为“多校区 × 多角色”动态权限，Redis + MySQL 分库分表支撑 10 万级并发。</li>
+ 			    <li><strong>业务性能优化</strong>：无限级树形评论用 MyBatis Plus 递归 CTE + Stream 并行归并，接口耗时从 600 ms 降至 90 ms。</li>
+ 			    <li><strong>实时通信方案</strong>：WebSocket 集群 + Redis Pub/Sub 消息总线实现好友私聊 99.9 % 可达、断线重连 &lt; 3 秒。</li>
+			    <li><strong>高可用保障</strong>：动态线程池 + 令牌桶限流压测 QPS 1.2 万；Sentry + ELK 两周修复 47 个缺陷，Crash 率 0.2 %。</li>
+			    <li><strong>项目价值与启示</strong>：验证高并发社交落地范式，沉淀跨端一致性、分布式实时通信与自动化运维经验，为千万级用户产品奠基。</li>
+			</ul>`,
+        meta:'2024.12.11 ',
     },
     {
-        img:'https://picsum.photos/seed/7/600/400',
+        img:'./image/苍穹外卖.png',
         tag:'视频学习',
         title:'完整大型项目-“苍穹外卖”学习与实现',
         excerpt:'通过实战掌握 Spring Boot + Vue 全栈外卖系统，涵盖商家、用户、骑手三端业务。',
-        content:`<p>阶段学习总结：<br>1. 单体 → 前后端分离<br>2. Redis 缓存 & 分布式锁<br>3. WebSocket 实时催单<br>4. 阿里云 OSS 图片存储</p>`,
-        meta:'完成时间 2024.08.23 · 1128 阅读 · 21 点赞 · 24 收藏',
+        content:`<p></p>
+		    <ul>
+		        <li><strong>项目角色与范围</strong>：担任全栈开发工程师，端到端负责需求梳理、架构设计、迭代发布与线上运维，保障多端点餐、商家管理、骑手调度全链路高可用。</li>
+		        <li><strong>前端技术挑战</strong>：基于 Vue3 + Uni-app 一套代码输出用户小程序、H5、商家后台、骑手 App 四端，兼容 30+ 机型异形屏及微信/支付宝双端支付。</li>
+		        <li><strong>后端架构深度</strong>：Spring Cloud Alibaba 微服务集群，整合 Spring Security + JWT 多角色动态权限；Redis 缓存 + MySQL 分库分表 + Canal 同步，支撑 20 万级日订单并发。</li>
+ 		        <li><strong>业务性能优化</strong>：菜品、订单两级缓存 + 分布式锁防止超卖，将下单接口耗时从 800 ms 降至 120 ms；引入 Elasticsearch 实现秒级搜索与智能推荐。</li>
+ 		        <li><strong>实时配送方案</strong>：WebSocket + Netty 构建高并发消息网关，骑手位置秒级推送，结合 Redis Geo 计算最优路径，异常订单 5 秒内重派。</li>
+		        <li><strong>高可用保障</strong>：Sentinel 流控 + 动态线程池压测 QPS 3 万；SkyWalking + ELK 全链路追踪，上线两周定位并修复 62 个隐藏缺陷，系统可用性达 99.95 %。</li>
+		        <li><strong>项目价值与启示</strong>：验证外卖高并发交易落地范式，沉淀多端一致、分布式事务、实时配送与自动化运维经验，为后续千万级日单量平台奠定技术与组织基础。</li>
+		    </ul>`,
+        meta:'完成时间 2024.08.23 ',
     },
     {
-        img:'https://picsum.photos/seed/8/600/400',
+        img:'./image/前端合集.png',
         tag:'独立开发',
         title:'前端静态页面功能样式实现项目集',
         excerpt:'基于 HTML5/CSS3/JS 的 20+ 精美页面模板，支持响应式与动效。',
-        content:`<p>收录 20+ 高质量模板：后台管理、登录注册、音乐播放器、天气预报等，全部响应式 + 动效。</p>`,
-        meta:'完成时间 2024.06.23 · 1128 阅读 · 21 点赞 · 24 收藏',
+        content:`<p></p>
+		    <ul>
+		        <li><strong>临摹阶段：像素级还原</strong><br>我选取 Apple、Stripe 等 20 余套高完成度官网，用 Figma 做像素级标注，再用原生 HTML5+SCSS 重构，重点攻克响应式栅格、Retina 1x/2x 图像适配及字体平滑，保证 Chrome/Safari/Firefox 三端 100 % 还原。</li>
+		        <li><strong>动效难点：无缝滚动与视差</strong><br>在“无限卡片”Demo 中，需实现 GPU 级流畅滚动。我采用 <code>requestAnimationFrame</code> 驱动 <code>transform: translate3d()</code>，配合 <code>will-change</code> 创建合成层，解决 60 fps 掉帧；视差部分通过监听 <code>scrollTop</code> 计算不同层速度系数，降低重排。</li>
+		        <li><strong>粒子互动：Canvas 性能优化</strong><br>为打造“烟花点赞”效果，我使用 <code>OffscreenCanvas</code> 双缓冲绘制 3000+ 粒子，应用四叉树剔除视外粒子，并用 <code>SharedArrayBuffer</code> 在 Worker 中并行更新位置，主线程负载从 90 % 降至 25 %。</li>
+		        <li><strong>SVG 路径动画：精准描边</strong><br>Logo 描边动画要求沿 Bézier 曲线匀速行进。我先用 <code>path.getTotalLength()</code> 计算全长，再用 <code>stroke-dasharray / stroke-dashoffset</code> 与 <code>requestAnimationFrame</code> 插值，精确控制 0→100 % 的绘制节奏，兼容 Edge 旧内核。</li>
+		        <li><strong>总结与收益</strong><br>通过临摹+原创，我系统掌握了帧率优化、合成层管理及跨端兼容策略，累计输出 40+ CodePen 动效，获得 3 万浏览与 1.2 k 点赞，显著提升了前端实战与性能调优能力。</li>
+		    </ul>`,
+        meta:'完成时间 2024.06.23 ',
     },
     {
-        img:'https://picsum.photos/seed/9/600/400',
+        img:'./image/计算机技术奖.jpg',
         tag:'国家奖项',
         title:'全国计算机应用技能大赛决赛一等奖',
-        excerpt:'2023 年国赛一等奖，项目主题为 AI 智能垃圾分类系统。',
-        content:`<p>国赛现场 48 小时极限开发，作品《AI 智能垃圾分类系统》斩获一等奖。</p><p>技术栈：TensorFlow Lite + 微信小程序 + Java 后端。</p>`,
-        meta:'获得时间 2023.12.11 · 1128 阅读 · 21 点赞 · 24 收藏',
+        excerpt:'2023 年全国计算机应用技能大赛决赛一等奖',
+        content:`<p>比赛以技术实现以及计算机基础知识考核为主体，经过市赛、省赛、国赛三轮评比决出最终胜者</p>`,
+        meta:'获得时间 2023.12.11 ',
     },
     {
-        img:'https://picsum.photos/seed/10/600/400',
+        img:'./image/信息网络竞赛.jpg',
         tag:'国家奖项',
         title:'信息网络竞赛一等奖',
-        excerpt:'2024 年信息网络布线与安全赛项全国一等奖。',
-        content:`<p>2024 年全国职业院校技能大赛“信息网络布线与安全”赛项一等奖。</p>`,
-        meta:'获得时间 2024.07.17 · 1128 阅读 · 21 点赞 · 24 收藏',
+        excerpt:'2024 年信息网络与安全赛项全国一等奖。',
+        content:`<p>比赛以技术实现以及计算机基础知识考核为主体，经过市赛、省赛、国赛三轮评比决出最终胜者</p>`,
+        meta:'获得时间 2024.07.17 ',
     }
 ];
 /* ============================================================
@@ -323,7 +369,9 @@ function openModal(id) {
     modalBody.innerHTML = `
         <h1 class="modal-title">${art.title}</h1>
         <span class="modal-tag">${art.tag}</span>
-        <img class="modal-img" src="${art.img}" alt="cover">
+        <div class="modal-img-wrapper">
+            <img class="modal-img" src="${art.img}" alt="cover">
+        </div>
         <div class="modal-body">${art.content}</div>
         <div class="article-meta" style="margin-top:20px;text-align:right">${art.meta}</div>
     `;
@@ -573,12 +621,26 @@ renderArticles();
         font-size:13px;
         margin-bottom:15px;
     }
+	
+	.modal-img-wrapper{
+	    width: 100%;          /* 或固定值如 480px */
+	    height: 0;
+	    padding-bottom: 56.25%; /* 16:9 占位，防止抖动，可按需调整 */
+	    position: relative;
+	    overflow: hidden;
+	    border-radius: 8px;
+	}
     .modal-img{
         width:100%;
         max-height:400px;
         object-fit:cover;
+        object-position:center;
         border-radius:var(--radius);
         margin-bottom:18px;
+        /* 新增：防止超大屏拉伸失真 */
+        max-width:100%;
+        /* 新增：保持纵横比 */
+        aspect-ratio:4 / 3;   /* 可按实际比例调整，如 4/3、1/1 */
     }
     .modal-body{line-height:1.8;font-size:15px;color:#333}
 
